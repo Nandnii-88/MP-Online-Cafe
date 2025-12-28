@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cafe</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="cafe"></div>
+
+<script src="js/data.js"></script>
+<script>
+const id = new URLSearchParams(window.location.search).get("id");
+const cafe = cafes.find(c => c.id == id);
+
+document.getElementById("cafe").innerHTML = `
+  <img class="banner" src="${cafe.image}">
+  <h1>${cafe.name}</h1>
+  <p>${cafe.area} • ⭐ ${cafe.rating}</p>
+  <button onclick="location.href='menu.html?id=${cafe.id}'">View Menu 🍽️</button>
+`;
+</script>
+
+</body>
+</html>

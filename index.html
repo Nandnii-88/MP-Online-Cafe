@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MP Cafe Finder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to MP Cafe Finder</h1>
+        <p id="sub-title">Please select your city to continue</p>
+    </header>
+
+    <div id="city-selector" style="text-align: center; margin: 50px 0;">
+        <button class="view-menu-btn" style="padding: 20px 40px; font-size: 1.2rem;" onclick="selectCity('Bhopal')">📍 Explore Bhopal</button>
+        <button class="view-menu-btn" style="padding: 20px 40px; font-size: 1.2rem; background-color: #341f97;" onclick="selectCity('Indore')">📍 Explore Indore</button>
+    </div>
+
+    <div id="cafe-display-area" style="display: none;">
+        <div style="text-align: center; margin-bottom: 20px;">
+            <button onclick="location.reload()" style="background:none; border:none; color:#ff4757; cursor:pointer; font-weight:bold; font-size: 1.1rem;">← Change City</button>
+        </div>
+        <div id="cafe-container" class="cafe-grid">
+            </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
